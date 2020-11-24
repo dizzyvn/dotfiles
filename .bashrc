@@ -40,3 +40,34 @@ source ~/.git-completion.bash
 
 # Color prompt
 export TERM=xterm-256color
+
+# Allow Unfree package for Nix
+export NIXPKGS_ALLOW_UNFREE=1
+
+# Port forwarding
+function convertnb() {
+    sed -e 's/"outputPrepend",//g' "$1".ipynb | sed -r '/^\s*$/d' > _tmp.ipynb
+    jupyter nbconvert --to python _tmp.ipynb --output $1.py
+    rm _tmp.ipynb
+}
+
+function runnb() {
+    sed -e 's/"outputPrepend",//g' "$1".ipynb | sed -r '/^\s*$/d' > _tmp.ipynb
+    jupyter nbconvert --to python _tmp.ipynb --output $1.py
+    rm _tmp.ipynb
+    python $1.py
+}
+
+function setup_ssh(){
+    local port="${2:-6000}"
+    local target="192.168.100.22"
+    ssh -L "$port":"$target":22 gateway
+}
+
+function forward(){
+    local host="${1:-mdl-tran}"
+    local port="${2:-8888}"
+    ssh -N -f -L localhost:"$port":localhost:"$port" "$host"
+}
+
+source ~/Dropbox/private_dotfiles/.private
