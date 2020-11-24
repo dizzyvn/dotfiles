@@ -3,14 +3,14 @@
 # Up from scripts dir
 cd ..
 
-dotfilesDir=$(pwd)
-privatedotfilesDir=/home/dizzy/Dropbox/private_dotfiles
-
 function linkDotfile {
-  dest="${HOME}/${1}"
+  dotfilesDir=$(pwd)
+  privatedotfilesDir=/home/dizzy/Dropbox/private_dotfiles
+
+  dest="${2}/${1}"
   dateStr=$(date +%Y-%m-%d-%H%M)
 
-  if [ -h ~/${1} ]; then
+  if [ -h ${2}/${1} ]; then
     # Existing symlink 
     echo "Removing existing symlink: ${dest}"
     rm ${dest} 
@@ -31,10 +31,10 @@ function linkDotfile {
 }
 
 function linkPrivateDotfile {
-  dest="${HOME}/${1}"
+  dest="${2}/${1}"
   dateStr=$(date +%Y-%m-%d-%H%M)
 
-  if [ -h ~/${1} ]; then
+  if [ -h ${2}/${1} ]; then
     # Existing symlink
     echo "Removing existing symlink: ${dest}"
     rm ${dest}
@@ -54,12 +54,17 @@ function linkPrivateDotfile {
   ln -s ${privatedotfilesDir}/${1} ${dest}
 }
 
-linkDotfile .vimrc
-linkDotfile .tmux.conf
-linkDotfile .bashrc
-linkDotfile .bash_profile
-linkDotfile .gitconfig
-linkDotfile .gitmessage
-linkDotfile .git-completion.bash
-linkDotfile .doom.d
-linkPrivateDotfile .ssh
+linkDotfile .vimrc ${HOME}
+linkDotfile .tmux.conf ${HOME}
+linkDotfile .bashrc ${HOME}
+linkDotfile .bash_profile ${HOME}
+linkDotfile .gitconfig ${HOME}
+linkDotfile .gitmessage ${HOME}
+linkDotfile .git-completion.bash ${HOME}
+linkDotfile .doom.d ${HOME}
+linkDotfile .direnvrc ${HOME}
+linkPrivateDotfile .ssh ${HOME}
+
+cd vscode
+linkDotfile settings.json ${HOME}/.config/Code/User
+linkDotfile keybindings.json ${HOME}/.config/Code/User

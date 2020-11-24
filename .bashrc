@@ -44,6 +44,9 @@ export TERM=xterm-256color
 # Allow Unfree package for Nix
 export NIXPKGS_ALLOW_UNFREE=1
 
+# Hook direnv
+eval "$(direnv hook bash)"
+
 # Port forwarding
 function convertnb() {
     sed -e 's/"outputPrepend",//g' "$1".ipynb | sed -r '/^\s*$/d' > _tmp.ipynb

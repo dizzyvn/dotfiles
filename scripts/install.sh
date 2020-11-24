@@ -32,6 +32,8 @@ install git
 install htop
 install openvpn
 install tmux
+install direnv
+install pipenv
 
 # Image processing
 install gimp
@@ -43,8 +45,34 @@ install figlet
 install lolcat
 
 # Development
-python3-venvp
+python3-venv
 python3-pip
+python3-virtualenv
+
+# Texlive
+install texlive
+install texlive-lang-japanese
+install texlive-science
+
+# Pycharm Professional
+snap_install slack
+snap_install teams-for-linux
+snap_install spotify
+
+# VSCode
+snap_install code
+code --install-extension arrterian.nix-env-selector
+code --install-extension bbenoist.Nix
+code --install-extension Equinusocio.vsc-community-material-theme
+code --install-extension Equinusocio.vsc-material-theme
+code --install-extension equinusocio.vsc-material-theme-icons
+code --install-extension KevinRose.vsc-python-indent
+code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension PKief.material-icon-theme
+code --install-extension tuttieee.emacs-mcx
 
 # Dropbox
 which dropbox &> /dev/null
@@ -54,6 +82,19 @@ if [ $? -ne 0 ]; then
   sudo chmod +x /usr/local/bin/dropbox
 fi
 
+# Nix
+which nix &> /dev/null
+if [ $? -ne 0 ]; then
+  curl -L https://nixos.org/nix/install | sh
+  /home/dizzy/.nix-profile/etc/profile.d/nix.sh
+fi
+
+# Zotero
+wget -qO- https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash
+sudo apt update
+install zotero
+wget https://github.com/jlegewie/zotfile/releases/download/v5.0.16/zotfile-5.0.16-fx.xpi -O ~/Downloads/zotfile.xpi
+
 # Emacs
 install emacs
 which .emacs.d/bin/doom &> /dev/null
@@ -61,15 +102,3 @@ if [ $? -ne 0 ]; then
   git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   ~/.emacs.d/bin/doom install
 fi
-
-# Nix
-which nix &> /dev/null
-if [ $? -ne 0 ]; then
-  curl -L https://nixos.org/nix/install | sh
-  /home/dizzy/.nix-profile/etc/profile.d/nix.sh
-fi
-#
-# Pycharm Professional
-snap_install pycharm-professional
-snap_install slack
-snap_install teams-for-linux

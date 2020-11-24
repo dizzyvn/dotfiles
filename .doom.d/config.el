@@ -72,6 +72,11 @@
   (openwith-mode t)
   (add-to-list 'openwith-associations '("\\.pdf\\'" "okular" (file))))
 
+;; Python virtualenv
+(require 'auto-virtualenv)
+(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
+(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+
 ;; Load configs
 ;; (load-file "~/.doom.d/org.el")
 ;; (load-file "~/.doom.d/tex.el")
