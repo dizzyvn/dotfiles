@@ -1,14 +1,11 @@
-# Ubuntu 19.10 Dotfiles
-
-Now in new-and-improved *Vaporwave flavor!*
-
-My personal set-up scripts. I wrote about these in this [accompanying article](https://victoria.dev/verbose/how-to-set-up-a-fresh-ubuntu-desktop-using-only-dotfiles-and-bash-scripts/).
+My dotfiles
+(Mainly based on https://github.com/victoriadrake/dotfiles)
 
 ## Included `scripts/`
 
 - `symlink.sh` sets up symbolic links in `$HOME`
-- `aptinstall.sh` owns Ubuntu repository installs
-- `programs.sh` leverages progressive command line installation of other software
+- `install.sh` owns Ubuntu repository installs
+- `config.sh` configuration script for some software
 - `desktop.sh` champions granular executive desktop environment settings
 - `setup.sh` facilitates the scalable and proactive deliverables of running all the scripts and `apt upgrade`
 
