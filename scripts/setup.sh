@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ./symlink.sh
-./aptinstall.sh
-./programs.sh
+./install.sh
+./config.sh
 ./desktop.sh
 
 # Get all upgrades

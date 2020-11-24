@@ -4,3 +4,4 @@ id_rsa*
 *.pub
 .aws
 .bash_history
+#*#

@@ -1,7 +1,7 @@
 
 [user]
-    name = Victoria Drake
-    email = hello@victoria.dev
+    name  = Thien Q. Tran
+    email = thientquang@gmail.com
 [color]
     diff = auto
     status = auto
@@ -17,7 +17,7 @@
 [commit]
     template = ~/.gitmessage
 [core]
-    editor = vim
+    editor = emacs
 [push]
     followTags = true
     default = current
