@@ -1,7 +1,7 @@
 #!/bin/bash
 
-./symlink.sh
 ./install.sh
+./symlink.sh
 ./config.sh
 ./desktop.sh
 

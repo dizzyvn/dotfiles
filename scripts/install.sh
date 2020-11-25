@@ -50,9 +50,7 @@ python3-pip
 python3-virtualenv
 
 # Texlive
-install texlive
-install texlive-lang-japanese
-install texlive-science
+install texlive-full
 
 # Pycharm Professional
 snap_install slack

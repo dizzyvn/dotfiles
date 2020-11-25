@@ -36,5 +36,6 @@
     "jupyter.interactiveWindowMode": "perFile",
     "gitProjectManager.baseProjectsFolders": [
         "home/dizzy/workspace/"
-    ]
+    ],
+    "latex-workshop.view.pdf.viewer": "tab"
 }

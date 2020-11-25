@@ -61,8 +61,8 @@ linkDotfile .bash_profile ${HOME}
 linkDotfile .gitconfig ${HOME}
 linkDotfile .gitmessage ${HOME}
 linkDotfile .git-completion.bash ${HOME}
-linkDotfile .doom.d ${HOME}
 linkDotfile .direnvrc ${HOME}
+linkDotfile .doom.d ${HOME}
 linkPrivateDotfile .ssh ${HOME}
 
 cd vscode
