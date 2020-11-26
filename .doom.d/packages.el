@@ -52,3 +52,4 @@
 (package! nix-buffer)
 (package! openwith)
 (package! auto-virtualenv)
+(package! org2blog)

@@ -18,6 +18,9 @@
 ;;  description
 ;;
 ;;; Code:
+     :PROPERTIES:
+     :ID: o2b:fd64194e-4b0c-4b34-a15a-2d2ee5fe2aec
+     :END:
 
 (setq org-refile-targets '((nil :maxlevel . 3)
                            (org-agenda-files :maxlevel . 3))
@@ -249,6 +252,14 @@ Captured %<%Y-%m-%d %H:%M>
                               ("mdl.cs.tsukuba.ac.jp_i7hu9mdot5u2trmuorrhaf3p4g@group.calendar.google.com" . "~/Dropbox/organizer/agenda/s-mdl.org")
                               )
         ))
+
+(require 'org2blog)
+(setq org2blog/wp-blog-alist
+      '(("myblog"
+         :url "https://dizzytran.com/blog/xmlrpc.php"
+         :username "thientquang")))
+(add-to-list 'org-structure-template-alist '
+             ("h" "+BEGIN_EXPORT html\n\n#+END_EXPORT"))
 
 (provide 'org)
 ;;; org.el ends here
