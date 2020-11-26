@@ -4,6 +4,7 @@
 ./symlink.sh
 ./config.sh
 ./desktop.sh
+./input.sh
 
 # Get all upgrades
 sudo apt upgrade -y

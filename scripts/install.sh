@@ -34,6 +34,11 @@ install openvpn
 install tmux
 install direnv
 install pipenv
+install openssh-server
+install unison
+
+
+
 
 # Image processing
 install gimp

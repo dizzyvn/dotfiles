@@ -44,6 +44,9 @@ export TERM=xterm-256color
 # Allow Unfree package for Nix
 export NIXPKGS_ALLOW_UNFREE=1
 
+# Add Doom path
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
 # Hook direnv
 eval "$(direnv hook bash)"
 
@@ -61,16 +64,14 @@ function runnb() {
     python $1.py
 }
 
-function setup_ssh(){
-    local port="${2:-6000}"
-    local target="192.168.100.22"
-    ssh -L "$port":"$target":22 gateway
-}
-
-function forward(){
+function forward_kernel(){
     local host="${1:-mdl-tran}"
     local port="${2:-8888}"
     ssh -N -f -L localhost:"$port":localhost:"$port" "$host"
+}
+
+function sync_zotero(){
+    unison -auto ~/library/ ssh://mdl-tran//home/dizzy/library/
 }
 
 source ~/Dropbox/private_dotfiles/.private
