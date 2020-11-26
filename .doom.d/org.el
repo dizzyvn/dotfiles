@@ -18,10 +18,6 @@
 ;;  description
 ;;
 ;;; Code:
-     :PROPERTIES:
-     :ID: o2b:fd64194e-4b0c-4b34-a15a-2d2ee5fe2aec
-     :END:
-
 (setq org-refile-targets '((nil :maxlevel . 3)
                            (org-agenda-files :maxlevel . 3))
       org-outline-path-complete-in-steps nil
