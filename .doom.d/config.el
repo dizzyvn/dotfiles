@@ -78,5 +78,5 @@
 (add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
 
 ;; Load configs
-;; (load-file "~/.doom.d/org.el")
+(load-file "~/.doom.d/org.el")
 ;; (load-file "~/.doom.d/tex.el")
