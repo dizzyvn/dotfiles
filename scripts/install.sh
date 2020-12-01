@@ -36,9 +36,7 @@ install direnv
 install pipenv
 install openssh-server
 install unison
-
-
-
+install gdebi
 
 # Image processing
 install gimp
@@ -58,7 +56,6 @@ python3-virtualenv
 install texlive-full
 
 # Pycharm Professional
-snap_install slack
 snap_install teams-for-linux
 snap_install spotify
 
@@ -105,3 +102,7 @@ if [ $? -ne 0 ]; then
   git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   ~/.emacs.d/bin/doom install
 fi
+
+# Slack
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.11.3-amd64.deb -O Downloads/slack.deb
+sudo gdebi Downloads/slack.deb
