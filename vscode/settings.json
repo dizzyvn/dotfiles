@@ -1,12 +1,5 @@
 {
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+    "workbench.editorAssociations": [],
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#00BCD4",
         "activityBar.activeBorder": "#00BCD4",
@@ -32,10 +25,44 @@
         "selection.background": "#00BCD440",
         "statusBarItem.remoteBackground": "#00BCD4"
     },
-    "materialTheme.accent": "Cyan",
     "jupyter.interactiveWindowMode": "perFile",
     "gitProjectManager.baseProjectsFolders": [
         "home/dizzy/workspace/"
     ],
-    "latex-workshop.view.pdf.viewer": "tab"
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.iconTheme": "file-icons-colourless",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 22,
+    "workbench.colorTheme": "Dracula",
+    "window.zoomLevel": 0,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.python",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.autoComplete.addBrackets": true,
+    "python.venvPath": "~/.venv",
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E402,E203,W503",
+    ],
+    "python.formatting.provider": "black",
+    "jupyter.askForKernelRestart": false,
+    "python.linting.flake8Enabled": true,
+    "window.menuBarVisibility": "default",
+    "python.sortImports.args": [
+        "--sl",
+        "--atomic",
+        "--lss",
+        "--ot",
+        "--fass",
+        "-a from __future__ import absolute_import",
+        "-a from __future__ import division",
+        "-a from __future__ import print_function",  
+        "--remove-redundant-aliases"
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    
 }

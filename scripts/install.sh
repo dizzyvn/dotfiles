@@ -52,6 +52,9 @@ python3-venv
 python3-pip
 python3-virtualenv
 
+# Fonts
+install fonts-firacode
+
 # Texlive
 install texlive-full
 
@@ -63,16 +66,15 @@ snap_install spotify
 snap_install code
 code --install-extension arrterian.nix-env-selector
 code --install-extension bbenoist.Nix
-code --install-extension Equinusocio.vsc-community-material-theme
-code --install-extension Equinusocio.vsc-material-theme
-code --install-extension equinusocio.vsc-material-theme-icons
+code --install-extension dracula-theme.theme-dracula
+code --install-extension evan-buss.font-switcher
 code --install-extension KevinRose.vsc-python-indent
 code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-ssh-edit
-code --install-extension PKief.material-icon-theme
 code --install-extension tuttieee.emacs-mcx
+code --install-extension file-icons.file-icons
 
 # Dropbox
 which dropbox &> /dev/null
