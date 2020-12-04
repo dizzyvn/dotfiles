@@ -257,5 +257,11 @@ Captured %<%Y-%m-%d %H:%M>
 (add-to-list 'org-structure-template-alist '
              ("h" "+BEGIN_EXPORT html\n\n#+END_EXPORT"))
 
+(defun transform-square-brackets-to-round-ones(string-to-transform)
+  "Transforms [ into ( and ] into ), other chars left unchanged."
+  (concat
+  (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform))
+  )
+
 (provide 'org)
 ;;; org.el ends here
