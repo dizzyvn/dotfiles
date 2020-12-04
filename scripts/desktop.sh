@@ -14,12 +14,9 @@ cd ~/Dropbox/dracular-gnome-terminal
 
 # Install dracula theme for gtk
 mkdir ~/.themes
-wget https://github.com/dracula/gtk/archive/master.zip -O ~/Downloads/dracula.zip
-cd ~/Downloads/
-unzip dracula.zip
-mv ~/Downloads/gtk-master ~/.themes/Dracula
-gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
-gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+tar xvf Dracula.tar.xz -C ~/.themes/
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula-slim-standard-buttons"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula-slim-standard-buttons"
 
 # Install dracula icon theme
 mkdir ~/.icons
@@ -28,7 +25,6 @@ cd ~/Downloads/
 unzip dracula-icons.zip
 mv ~/Downloads/Dracula ~/.icons/Dracula
 gsettings set org.gnome.desktop.interface icon-theme "Dracula"
-
 
 # Add startup application
 python3 set_startupscript.py 'Dropbox' 'dropbox start'
