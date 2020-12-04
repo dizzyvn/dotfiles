@@ -1,5 +1,5 @@
 [control-center]
-last-panel='keyboard'
+last-panel='display'
 
 [desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -26,6 +26,7 @@ secondary-color='#000000'
 show-weekdate=false
 
 [desktop/input-sources]
+mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp'), ('ibus', 'Unikey')]
 show-all-sources=true
 sources=[('xkb', 'us')]
 xkb-options=['ctrl:swapcaps']
@@ -34,7 +35,7 @@ xkb-options=['ctrl:swapcaps']
 cursor-theme='Yaru'
 enable-hot-corners=false
 gtk-im-module='gtk-im-context-simple'
-gtk-theme='Yaru'
+gtk-theme='Yaru-dark'
 icon-theme='Yaru'
 show-battery-percentage=true
 toolkit-accessibility=false
@@ -42,17 +43,44 @@ toolkit-accessibility=false
 [desktop/notifications]
 application-children=['gnome-power-panel', 'org-gnome-tweaks', 'firefox']
 
+[desktop/notifications/application/apport-gtk]
+application-id='apport-gtk.desktop'
+
 [desktop/notifications/application/firefox]
 application-id='firefox.desktop'
+
+[desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
 
 [desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
+[desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
+[desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
+
 [desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
 
+[desktop/notifications/application/spotify-spotify]
+application-id='spotify_spotify.desktop'
+
+[desktop/notifications/application/teams-for-linux-teams-for-linux]
+application-id='teams-for-linux_teams-for-linux.desktop'
+
+[desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[desktop/peripherals/keyboard]
+numlock-state=false
+
 [desktop/peripherals/mouse]
 accel-profile='flat'
+
+[desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
 
 [desktop/privacy]
 disable-microphone=false
@@ -68,6 +96,8 @@ secondary-color='#000000'
 theme-name='Yaru'
 
 [desktop/wm/keybindings]
+move-to-monitor-left=['<Shift><Super>j']
+move-to-monitor-right=['<Shift><Super>l']
 move-to-workspace-down=['<Shift><Super>k']
 move-to-workspace-up=['<Shift><Super>i']
 switch-to-workspace-down=['<Super>k']
@@ -77,9 +107,55 @@ switch-to-workspace-up=['<Super>i']
 background-color='rgb(0,0,0)'
 use-background-color=true
 
+[evince/default]
+window-ratio=(1.5326797385620916, 1.2702020202020201)
+
 [evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
+
+[evolution-data-server/calendar]
+notify-window-height=111
+notify-window-width=531
+notify-window-x=0
+notify-window-y=27
+reminders-past=@as []
+
+[file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
+[gedit/plugins]
+active-plugins=['modelines', 'filebrowser', 'spell', 'docinfo', 'time']
+
+[gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/dizzy/Dropbox/tsukuba/labo'
+
+[gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
+
+[gnome-screenshot]
+border-effect='none'
+include-border=true
+include-pointer=false
+last-save-directory='file:///home/dizzy/Pictures'
 
 [mutter]
 dynamic-workspaces=false
@@ -104,18 +180,18 @@ hinting='slight'
 enabled-extensions=['ubuntu-dock@ubuntu.com']
 
 [shell/extensions/dash-to-dock]
-dash-max-icon-size=30
-dock-fixed=false
+dash-max-icon-size=22
+dock-fixed=true
 dock-position='BOTTOM'
-preferred-monitor=0
+preferred-monitor=1
 
 [shell/extensions/desktop-icons]
 show-home=false
 show-trash=false
 
 [software]
-check-timestamp=int64 1606186697
-online-updates-timestamp=int64 1606186719
+check-timestamp=int64 1607040847
+online-updates-timestamp=int64 1607040851
 
 [terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(0,43,54)'
