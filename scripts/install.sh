@@ -37,6 +37,8 @@ install pipenv
 install openssh-server
 install unison
 install gdebi
+install okular
+install chrome-gnome-shell
 
 # Image processing
 install gimp
